@@ -6,7 +6,9 @@ function App() {
   const [text, setText] = useState('')
   const [type, setType] = useState('')
   const [parameter, setParameter] = useState('people')
-
+  const [prevReq, setPrevReq] = useState('')
+  const [prevParam, setPrevParam] = useState('')
+  const [prevType, setPrevType] = useState('')
 
   async function getName(url:String) {
     if (url) {
@@ -37,6 +39,8 @@ function App() {
     let result3 = document.getElementById('result3') as HTMLElement
     let result4 = document.getElementById('result4') as HTMLElement
     let result5 = document.getElementById('result5') as HTMLElement
+
+    if(text != prevReq || parameter != prevParam || type != prevType) {
 
     result1.innerText = "carregando..."
     result2.innerText = "carregando..."
@@ -98,6 +102,10 @@ function App() {
         result5.innerText = `Produtor(es): ${resObject.producer}`
       }
     })
+
+    setPrevReq(`${text}`)}
+    setPrevParam(`${parameter}`)
+    setPrevType(`${type}`)
   }
 
   return(
