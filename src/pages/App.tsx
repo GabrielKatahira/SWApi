@@ -9,12 +9,8 @@ function App() {
 
   function getName(url:String) {
     const requestName = fetch(`${url}`).then(res=>res.json())
-    var name
     requestName.then((res)=>{
-      switch (type) {
-        case "": name = res.name
-        case "?search=": name = res.results[0].name
-      }
+      return res.name
     })
   }
   function handleRequest () {
@@ -24,6 +20,8 @@ function App() {
     let result3 = document.getElementById('result3') as HTMLElement
     if (result1){
       result1.innerText = "carregando..."
+      result2.innerText = "carregando..."
+      result3.innerText = "carregando..."
     }
     requestResult.then((res)=>{
       var resObject; 
@@ -35,10 +33,11 @@ function App() {
         console.log(resObject)
       }
 
-      //switch (parameter) {
-       // case "people":
-       // result1.innerText = `Nome: ${resObject.name}`
-      //}
+      switch (parameter) {
+        case "people":
+        result1.innerText = `Nome: ${resObject.name}`
+        result2.innerText = `Planeta Natal: ${getName(resObject.homeworld)}`
+      }
     })
   }
 
