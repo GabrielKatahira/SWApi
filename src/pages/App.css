@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 70%;
+    max-width: 1200px;
+    background-color: #ccc;
+    border: 1px solid #333;
+}
+
+header {
+    width: 100%;
+    background-color: #ddd;
+    border-bottom: 1px solid #333;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+select, button, input{
+    height: 30px;
+    width: 100px;
+}
+
+.set{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    display: flex;
+    flex-flow: column;
+    align-items: end;
+}
+
+.set h1{
+    font-size: 1.3em;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    flex-flow: column;
+}
+
+button{
+    height: 60px;
+    background-color: rgb(20, 180, 20);
+    color:  white;
+    font-size: 1.3em;
+    border: 3px solid white;
+}
