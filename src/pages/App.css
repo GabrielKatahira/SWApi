@@ -1,43 +1,93 @@
 * {
+    font-family: Poppins;
     margin: 0;
     padding: 0;
+}
+
+::selection {
+    color: yellow;
+    background-color: black;
+}
+
+body {
+    background-image: url(../assets/backgroundfoda.jpg);
 }
 
 main{
     width: 100vw;
     height: 100vh;
     display: flex;
-    justify-content: center;
     align-items: center;
+    flex-flow: column;
+}
+
+#title {
+    margin: 100px;
+    color: yellow;
+    font-size: 4em;
 }
 
 .container{
-    width: 70%;
+    width: 50%;
     max-width: 1200px;
-    background-color: #ccc;
-    border: 1px solid #333;
+    background-color: #ddd;
+    border-radius: 20px;
+    overflow: hidden;
 }
 
 header {
-    width: 100%;
-    background-color: #ddd;
-    border-bottom: 1px solid #333;
+    border-bottom: 1px solid #444;
+    padding: 20px;
+    background-color: #bbb;
     display: flex;
+    flex-flow: column;
     align-items: center;
     justify-content: space-evenly;
 }
 
-select, button, input{
+.cell{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+input{
     height: 30px;
     width: 100px;
+    border-radius: 0;
+    background-color: #fff;
+    box-shadow: none;
+    outline: none;
+    border: 2px solid rgb(0, 132, 255);
+    padding: 5px;
+    margin-top: 10px;
+
+
+}
+
+select{
+    margin-top: 5px;
+    padding: 5px;
+    background-color: rgb(0, 132, 255);
+    box-shadow: none;
+    outline: none;
+    border: none;
+    border-bottom: 3px solid yellow;
+    width: 100px;
+    height: 30px;
 }
 
 .set{
+    width: 200px;
     margin-bottom: 20px;
     margin-top: 20px;
     display: flex;
     flex-flow: column;
-    align-items: end;
+    align-items: center;
+}
+
+h1 {
+    color: #444;
 }
 
 .set h1{
@@ -52,9 +102,19 @@ section {
 }
 
 button{
+    width: 150px;
     height: 60px;
-    background-color: rgb(20, 180, 20);
-    color:  white;
-    font-size: 1.3em;
-    border: 3px solid white;
+    background-color: rgb(0, 132, 255);
+    color:  yellow;
+    font-size: 1.5em;
+    font-weight: bold;
+    border: 3px solid yellow;
+    border-radius: 10px;
+    transition: .3s;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: rgb(0, 114, 221);
+    scale: 1.1;
 }
